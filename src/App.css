@@ -49,3 +49,10 @@
 .answer > span {
   margin-left: 8px;
 }
+
+.correct {
+  background: #05c715;
+}
+.wrong {
+  background: #d81313;
+}

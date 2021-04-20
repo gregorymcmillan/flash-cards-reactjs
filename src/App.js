@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import questions from "./Questions";
+import Answer from "./components/Answer";
 
 function App() {
   const [card, setCard] = useState(0);
@@ -31,8 +32,10 @@ function App() {
     if (ans === questions[card].a) {
       console.log("Correct!");
       return;
-    } else {
-      console.log("WRONG!");
+    }
+
+    if (ans !== questions[card].a) {
+      console.log("Wrong!");
       return;
     }
   };
@@ -67,22 +70,22 @@ function App() {
         <p className="question">{questions[card].q}</p>
         <hr />
         <div className="answer-group">
-          <button onClick={handleAnswerClick(answers[0].a)} className="answer">
-            <div className="circle">A</div>
-            <span>{answers[0].a}</span>
-          </button>
-          <button className="answer">
-            <div className="circle">B</div>
-            <span>{answers[1].a}</span>
-          </button>
-          <button className="answer">
-            <div className="circle">C</div>
-            <span>{answers[2].a}</span>
-          </button>
-          <button className="answer">
-            <div className="circle">D</div>
-            <span>{answers[3].a}</span>
-          </button>
+          <Answer
+            correctAnswer={questions[card].a}
+            buttonAnswer={answers[0].a}
+          />
+          <Answer
+            correctAnswer={questions[card].a}
+            buttonAnswer={answers[1].a}
+          />
+          <Answer
+            correctAnswer={questions[card].a}
+            buttonAnswer={answers[2].a}
+          />
+          <Answer
+            correctAnswer={questions[card].a}
+            buttonAnswer={answers[3].a}
+          />
         </div>
         <button onClick={handleNextClick}>N E X T!</button>
       </div>
