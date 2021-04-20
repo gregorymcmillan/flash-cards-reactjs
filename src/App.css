@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.flash-card {
+  width: 420px;
+  height: 266px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  line-height: 26px;
+  min-height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.answer-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.answer {
+  background: #dcdcdc;
+  border: none;
+  width: 170px;
+  height: 36px;
+  margin: 4px;
+  border-radius: 17px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 0;
+  padding-left: 3px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.answer > span {
+  margin-left: 8px;
 }
