@@ -1,51 +1,38 @@
-.flash-card {
-  width: 420px;
-  height: 266px;
-  background: #f1f1f1;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 60px;
-  padding: 40px;
+.App {
+  text-align: center;
 }
 
-.question {
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  line-height: 26px;
-  min-height: 80px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.answer-group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.answer {
-  background: #dcdcdc;
-  border: none;
-  width: 170px;
-  height: 36px;
-  margin: 4px;
-  border-radius: 17px;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0;
-  padding-left: 3px;
-}
-
-.circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #c4c4c4;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.answer > span {
-  margin-left: 8px;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
