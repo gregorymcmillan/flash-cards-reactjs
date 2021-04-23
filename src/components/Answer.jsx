@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./Answer.css";
 
-const Answer = ({ correctAnswer, buttonAnswer }) => {
+const Answer = ({ correctAnswer, buttonAnswer, letter }) => {
   const [buttonClass, setButtonClass] = useState("");
 
   useEffect(() => {
@@ -21,8 +22,14 @@ const Answer = ({ correctAnswer, buttonAnswer }) => {
 
   return (
     <button onClick={isCorrect} className={`answer ${buttonClass}`}>
-      <div className="circle">A</div>
-      <span>{buttonAnswer}</span>
+      <div className="circle">{letter}</div>
+      <div className="answer-container">
+        <span
+          className={buttonAnswer.length > 20 ? "answer-small" : "answer-large"}
+        >
+          {buttonAnswer}
+        </span>
+      </div>
     </button>
   );
 };

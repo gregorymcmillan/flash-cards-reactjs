@@ -1,0 +1,51 @@
+.answer {
+  background: #dcdcdc;
+  border: none;
+  width: 280px;
+  height: 60px;
+  margin: 4px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-left: 6px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.answer-container {
+  max-height: 46px;
+  max-width: 200px;
+  padding-left: 10px;
+}
+
+.answer span {
+  text-align: left;
+  /* word-wrap: break-word; */
+}
+
+.answer-small {
+  font-size: 16px;
+}
+.answer-large {
+  font-size: 18px;
+}
+
+.circle {
+  min-width: 46px;
+  min-height: 46px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.correct {
+  background: #05c715;
+}
+.wrong {
+  background: #d81313;
+}

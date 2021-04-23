@@ -1,0 +1,83 @@
+.profile {
+  width: 204px;
+  height: 436px;
+  background: #f1f1f1;
+  border-radius: 102px;
+}
+
+.profile-image {
+  margin: 15px;
+  border: 5px white solid;
+  border-radius: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-image img {
+  width: 170px;
+  height: 170px;
+}
+
+.tally-scores {
+  display: flex;
+  justify-content: center;
+}
+
+.tally-scores div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.correct-scores .dot {
+  background: #05ca6b;
+  border: 6px #a4f8d4 solid;
+}
+
+.wrong-scores .dot {
+  background: #db300b;
+  border: 6px #f8b3a4 solid;
+}
+
+.grades {
+  margin: 30px 0px;
+  text-align: center;
+}
+
+.label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #b6b9bc;
+  margin-bottom: 0px;
+}
+
+.total {
+  font-weight: bold;
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 0px;
+  line-height: 90%;
+}
+
+.reset-button {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-button button {
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  color: red;
+}

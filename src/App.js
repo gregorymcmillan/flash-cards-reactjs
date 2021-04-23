@@ -2,6 +2,10 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import questions from "./Questions";
 import Answer from "./components/Answer";
+import Profile from "./components/Profile";
+
+import next from "./next.svg";
+import prev from "./prev.svg";
 
 function App() {
   const [card, setCard] = useState(0);
@@ -11,7 +15,17 @@ function App() {
     if (card >= questions.length - 1) {
       return setCard(0);
     }
+    console.log(card);
     return setCard(card + 1);
+  };
+
+  const handlePrevClick = () => {
+    if (card === 0) {
+      return setCard(0);
+    }
+    console.log(card);
+
+    return setCard(card - 1);
   };
 
   const shuffle = (array) => {
@@ -26,18 +40,6 @@ function App() {
         array[top] = tmp;
       }
     return array;
-  };
-
-  const handleAnswerClick = (ans) => {
-    if (ans === questions[card].a) {
-      console.log("Correct!");
-      return;
-    }
-
-    if (ans !== questions[card].a) {
-      console.log("Wrong!");
-      return;
-    }
   };
 
   useEffect(() => {
@@ -66,28 +68,42 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="flash-card">
-        <p className="question">{questions[card].q}</p>
-        <hr />
-        <div className="answer-group">
-          <Answer
-            correctAnswer={questions[card].a}
-            buttonAnswer={answers[0].a}
-          />
-          <Answer
-            correctAnswer={questions[card].a}
-            buttonAnswer={answers[1].a}
-          />
-          <Answer
-            correctAnswer={questions[card].a}
-            buttonAnswer={answers[2].a}
-          />
-          <Answer
-            correctAnswer={questions[card].a}
-            buttonAnswer={answers[3].a}
-          />
+      <div className="container">
+        <div className="flash-card">
+          <p className="question">{questions[card].q}</p>
+          <div className="answer-group">
+            <Answer
+              correctAnswer={questions[card].a}
+              buttonAnswer={answers[0].a}
+              letter="A"
+            />
+            <Answer
+              correctAnswer={questions[card].a}
+              buttonAnswer={answers[1].a}
+              letter="B"
+            />
+            <Answer
+              correctAnswer={questions[card].a}
+              buttonAnswer={answers[2].a}
+              letter="C"
+            />
+            <Answer
+              correctAnswer={questions[card].a}
+              buttonAnswer={answers[3].a}
+              letter="D"
+            />
+          </div>
+          <div className="nav-button-group">
+            <button onClick={handlePrevClick}>
+              <img className="nav-button" src={prev} alt="prev" />
+            </button>
+            <button onClick={handleNextClick}>
+              <img className="nav-button" src={next} alt="next" />
+            </button>
+          </div>
         </div>
-        <button onClick={handleNextClick}>N E X T!</button>
+
+        <Profile />
       </div>
     </div>
   );

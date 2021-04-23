@@ -2,82 +2,82 @@ const questions = [
   {
     q:
       "The conducting passageways of the respiratory system include all of the following structures EXCEPT:",
-    a: "alveoli",
+    a: "Alveoli",
   },
   {
     q:
       "The respiratory conducting passageways perform all of the following functions EXCEPT:",
-    a: "exchange gases",
+    a: "Exchange gases",
   },
   {
     q: "Which one of the following terms does not apply to the nose:",
-    a: "nasopharynx",
+    a: "Nasopharynx",
   },
   {
     q: "What is the role of mucus in the nasal cavity:",
-    a: "trap incoming bacteria and other foreign debris",
+    a: "Trap incoming bacteria and other foreign debris",
   },
   {
     q: "The nasal cavity is separated from the oral cavity by:",
-    a: "both the hard and soft palate",
+    a: "Both the hard and soft palate",
   },
   {
     q: "Which one of the following bones does NOT contain paranasal sinuses:",
-    a: "mandible",
+    a: "Mandible",
   },
   {
     q: "Which one of the following is NOT a function of the paranasal sinuses:",
-    a: "they are olfactory receptors for smell",
+    a: "They are olfactory receptors for smell",
   },
   {
     q: "Tonsils that lie at the base of the tongue are called:",
-    a: "lingual tonsils",
+    a: "Lingual tonsils",
   },
   {
     q: "Following the removal of the larynx, a person would be unable to:",
-    a: "sneeze",
+    a: "Sneeze",
   },
   {
     q: "The opening between the vocal cords is called the:",
-    a: "glottis",
+    a: "Glottis",
   },
   {
     q:
       "The flap of elastic cartilage that protects food from entering the larynx when swallowing is the:",
-    a: "epiglottis",
+    a: "Epiglottis",
   },
   {
     q:
       "Which one of the following structures is NOT part of the respiratory zone:",
-    a: "primary bronchi",
+    a: "Primary bronchi",
   },
   {
     q:
       "Exchange of both oxygen and carbon dioxide through the respiratory membrane occurs by:",
-    a: "simple diffusion",
+    a: "Simple diffusion",
   },
   {
     q:
       "The lipid molecule critical to lung function that coats the gas-exposed alveolar surfaces is called:",
-    a: "surfactant",
+    a: "Surfactant",
   },
   {
     q: "Air moving in and out of the lungs is called:",
-    a: "pulmonary ventilation",
+    a: "Pulmonary ventilation",
   },
   {
     q:
       "The gas exchange that occurs between blood and tissue cells at systemic capillaries is called:",
-    a: "internal respiration",
+    a: "Internal respiration",
   },
   {
     q:
       "An emotionally-induced response during which air movement is similar to crying is:",
-    a: "laughing",
+    a: "Laughing",
   },
   {
     q: "A very deep inspiration that ventilates all alveoli is:",
-    a: "yawning",
+    a: "Yawning",
   },
 ];
 
