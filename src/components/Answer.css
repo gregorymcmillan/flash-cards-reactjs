@@ -44,8 +44,19 @@
 }
 
 .correct {
-  background: #05c715;
+  background: #a4f8d4;
 }
+
+.correct .circle {
+  background: #05ca6b;
+  color: #fff;
+}
+
 .wrong {
-  background: #d81313;
+  background: #f8b3a4;
+}
+
+.wrong .circle {
+  background: #db300b;
+  color: #fff;
 }

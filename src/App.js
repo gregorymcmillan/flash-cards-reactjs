@@ -10,12 +10,14 @@ import prev from "./prev.svg";
 function App() {
   const [card, setCard] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [correctScore, setCorrectScore] = useState(0);
+  const [incorrectScore, setIncorrectScore] = useState(0);
 
   const handleNextClick = () => {
     if (card >= questions.length - 1) {
-      return setCard(0);
+      // return setCard(questions.length - 1);
+      return null;
     }
-    console.log(card);
     return setCard(card + 1);
   };
 
@@ -23,9 +25,27 @@ function App() {
     if (card === 0) {
       return setCard(0);
     }
-    console.log(card);
-
     return setCard(card - 1);
+  };
+
+  const handleReset = () => {
+    setIncorrectScore(0);
+    setCorrectScore(0);
+    setCard(0);
+  };
+
+  const scoreHandler = (score) => {
+    let totalScoresCounted = incorrectScore + correctScore;
+    let totalQuestionsAsked = card + 1;
+    if (totalScoresCounted >= totalQuestionsAsked) {
+      return null;
+    }
+
+    if (score === "correct") {
+      setCorrectScore(correctScore + 1);
+    } else if (score === "wrong") {
+      setIncorrectScore(incorrectScore + 1);
+    }
   };
 
   const shuffle = (array) => {
@@ -76,21 +96,25 @@ function App() {
               correctAnswer={questions[card].a}
               buttonAnswer={answers[0].a}
               letter="A"
+              scoreHandler={scoreHandler}
             />
             <Answer
               correctAnswer={questions[card].a}
               buttonAnswer={answers[1].a}
               letter="B"
+              scoreHandler={scoreHandler}
             />
             <Answer
               correctAnswer={questions[card].a}
               buttonAnswer={answers[2].a}
               letter="C"
+              scoreHandler={scoreHandler}
             />
             <Answer
               correctAnswer={questions[card].a}
               buttonAnswer={answers[3].a}
               letter="D"
+              scoreHandler={scoreHandler}
             />
           </div>
           <div className="nav-button-group">
@@ -103,7 +127,11 @@ function App() {
           </div>
         </div>
 
-        <Profile />
+        <Profile
+          correctScore={correctScore}
+          incorrectScore={incorrectScore}
+          handleReset={handleReset}
+        />
       </div>
     </div>
   );

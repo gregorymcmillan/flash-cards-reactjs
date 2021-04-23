@@ -48,7 +48,7 @@
 }
 
 .nav-button-group button:hover {
-  background-color: lightgrey;
+  background: lightgrey;
   transition: 0.3s ease;
   cursor: pointer;
 }

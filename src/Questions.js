@@ -6,7 +6,7 @@ const questions = [
   },
   {
     q:
-      "The respiratory conducting passageways perform all of the following functions EXCEPT:",
+      "The respiratory conducting passageways does not peform which function listed below?",
     a: "Exchange gases",
   },
   {

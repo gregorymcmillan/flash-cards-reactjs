@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Answer.css";
 
-const Answer = ({ correctAnswer, buttonAnswer, letter }) => {
+const Answer = ({ correctAnswer, buttonAnswer, letter, scoreHandler }) => {
   const [buttonClass, setButtonClass] = useState("");
 
   useEffect(() => {
@@ -11,11 +11,13 @@ const Answer = ({ correctAnswer, buttonAnswer, letter }) => {
   const isCorrect = () => {
     if (correctAnswer === buttonAnswer) {
       setButtonClass("correct");
+      scoreHandler("correct");
       return;
     }
 
     if (correctAnswer !== buttonAnswer) {
       setButtonClass("wrong");
+      scoreHandler("wrong");
       return;
     }
   };

@@ -2,7 +2,11 @@ import React from "react";
 import "./Profile.css";
 import profile from "../profile.svg";
 
-const Profile = () => {
+const Profile = ({ correctScore, incorrectScore, handleReset }) => {
+  let grade = Math.round(
+    (correctScore / (correctScore + incorrectScore)) * 100
+  );
+
   return (
     <div className="profile">
       <div className="profile-image">
@@ -11,19 +15,19 @@ const Profile = () => {
       <div className="tally-scores">
         <div className="correct-scores">
           <span className="dot"></span>
-          <span>12</span>
+          <span>{correctScore}</span>
         </div>
         <div className="wrong-scores">
           <span className="dot"></span>
-          <span>3</span>
+          <span>{incorrectScore}</span>
         </div>
       </div>
       <div className="grades">
         <p className="label">GRADE</p>
-        <p className="total">80%</p>
+        <p className="total">{Number.isNaN(grade) ? "0" : grade}%</p>
       </div>
       <div className="reset-button">
-        <button>RESET</button>
+        <button onClick={handleReset}>RESET</button>
       </div>
     </div>
   );
